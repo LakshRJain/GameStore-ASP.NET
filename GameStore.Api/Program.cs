@@ -1,3 +1,4 @@
+using GameStore.Api.Data.Migrations;
 using GameStore.Api.Dtos;
 using GameStore.Api.Endpoints;
 using GameStore.Api.Entities;
@@ -11,4 +12,5 @@ var app = builder.Build();
 
 app.MapGamesEndpoints();
 
+app.MigrateDb();
 app.Run();
